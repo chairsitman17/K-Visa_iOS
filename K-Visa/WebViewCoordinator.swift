@@ -5,6 +5,7 @@
 
 import Foundation
 import WebKit
+import SwiftUI
 
 class WebViewCoordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
     weak var webView: WKWebView?
@@ -26,6 +27,11 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScript
                 viewModel.handleOAuthLogin(provider: "apple", presentingVC: presentingVC)
             } else {
                 print("ViewController를 찾을 수 없습니다.")
+            }
+        } else if message.name == "pageDidFullyLoad" {
+            print("페이지 로딩 완료")
+            DispatchQueue.main.async {
+                self.viewModel.isLoading = false
             }
         }
     }

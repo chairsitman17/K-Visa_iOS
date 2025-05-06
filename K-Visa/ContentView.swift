@@ -4,35 +4,36 @@
 //
 
 import SwiftUI
-import FirebaseCore
-import FirebaseAuth
-import GoogleSignIn
-
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
-}
 
 struct ContentView: View {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var viewModel = WebViewViewModel()
     
     var body: some View {
         ZStack(alignment: .top) {
             // K-Visa 웹앱 켜기
             WebViewView(viewModel: viewModel)
-//                .ignoresSafeArea(edges: [.bottom, .horizontal])
                 .padding(.bottom, 1)
-        
-//            // 상단 Dynamic Island 영역용 흰 배경
-//            Color.white
-//                .frame(height: 44)
-//                .edgesIgnoringSafeArea(.top)
+            
+            if viewModel.isLoading {
+                SplashView()
+                    .transition(.opacity)
+                    .zIndex(1)
+            }
+        }
+        .animation(.easeOut(duration: 0.3), value: viewModel.isLoading)
+    }
+}
+
+struct SplashView: View {
+    var body: some View {
+        ZStack {
+            Color.white
+                .ignoresSafeArea()
+            VStack {
+                Image("splash")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+            }
         }
     }
 }
