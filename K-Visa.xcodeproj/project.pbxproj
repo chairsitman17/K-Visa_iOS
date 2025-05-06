@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		667EE0852DC9A63E00DD981A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 667EE0842DC9A63E00DD981A /* GoogleSignIn */; };
+		667EE0872DC9A63E00DD981A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 667EE0862DC9A63E00DD981A /* GoogleSignInSwift */; };
+		667EE08A2DC9A6E900DD981A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 667EE0892DC9A6E900DD981A /* FirebaseAuth */; };
+		667EE08E2DC9A77500DD981A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 667EE08D2DC9A77500DD981A /* FirebaseAnalytics */; };
+		667EE0962DC9FC0900DD981A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 667EE0952DC9FC0400DD981A /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		66154ACE2DC46FA70036244C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +35,25 @@
 		66154ABD2DC46FA50036244C /* K-Visa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K-Visa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66154ACD2DC46FA70036244C /* K-VisaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K-VisaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66154AD72DC46FA70036244C /* K-VisaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K-VisaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		667EE0952DC9FC0400DD981A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		667EE0902DC9A85400DD981A /* Exceptions for "K-Visa" folder in "K-Visa" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 66154ABC2DC46FA50036244C /* K-Visa */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		66154ABF2DC46FA50036244C /* K-Visa */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				667EE0902DC9A85400DD981A /* Exceptions for "K-Visa" folder in "K-Visa" target */,
+			);
 			path = "K-Visa";
 			sourceTree = "<group>";
 		};
@@ -52,6 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667EE0852DC9A63E00DD981A /* GoogleSignIn in Frameworks */,
+				667EE08A2DC9A6E900DD981A /* FirebaseAuth in Frameworks */,
+				667EE08E2DC9A77500DD981A /* FirebaseAnalytics in Frameworks */,
+				667EE0872DC9A63E00DD981A /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +101,11 @@
 		66154AB42DC46FA50036244C = {
 			isa = PBXGroup;
 			children = (
+				667EE0952DC9FC0400DD981A /* .gitignore */,
 				66154ABF2DC46FA50036244C /* K-Visa */,
 				66154AD02DC46FA70036244C /* K-VisaTests */,
 				66154ADA2DC46FA70036244C /* K-VisaUITests */,
+				667EE0882DC9A6E900DD981A /* Frameworks */,
 				66154ABE2DC46FA50036244C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +118,13 @@
 				66154AD72DC46FA70036244C /* K-VisaUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		667EE0882DC9A6E900DD981A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +147,10 @@
 			);
 			name = "K-Visa";
 			packageProductDependencies = (
+				667EE0842DC9A63E00DD981A /* GoogleSignIn */,
+				667EE0862DC9A63E00DD981A /* GoogleSignInSwift */,
+				667EE0892DC9A6E900DD981A /* FirebaseAuth */,
+				667EE08D2DC9A77500DD981A /* FirebaseAnalytics */,
 			);
 			productName = "K-Visa";
 			productReference = 66154ABD2DC46FA50036244C /* K-Visa.app */;
@@ -195,6 +234,10 @@
 			);
 			mainGroup = 66154AB42DC46FA50036244C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				667EE0822DC9A58500DD981A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				667EE0832DC9A63E00DD981A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66154ABE2DC46FA50036244C /* Products */;
 			projectDirPath = "";
@@ -212,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667EE0962DC9FC0900DD981A /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +443,7 @@
 				DEVELOPMENT_TEAM = 7WTLCKV6V4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "K-Visa/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -409,6 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.K-Visa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -428,6 +474,7 @@
 				DEVELOPMENT_TEAM = 7WTLCKV6V4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "K-Visa/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,6 +485,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.K-Visa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -558,6 +606,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		667EE0822DC9A58500DD981A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
+		667EE0832DC9A63E00DD981A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		667EE0842DC9A63E00DD981A /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 667EE0832DC9A63E00DD981A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		667EE0862DC9A63E00DD981A /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 667EE0832DC9A63E00DD981A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		667EE0892DC9A6E900DD981A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 667EE0822DC9A58500DD981A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		667EE08D2DC9A77500DD981A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 667EE0822DC9A58500DD981A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66154AB52DC46FA50036244C /* Project object */;
 }
