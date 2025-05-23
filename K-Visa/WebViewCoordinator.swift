@@ -6,6 +6,8 @@
 import Foundation
 import WebKit
 import SwiftUI
+import Firebase
+import Foundation
 
 class WebViewCoordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
     weak var webView: WKWebView?
@@ -13,6 +15,12 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScript
     
     init(viewModel: WebViewViewModel) {
         self.viewModel = viewModel
+//        super.init()
+//        NotificationCenter.default.addObserver(forName: .FCMTokenReceived, object: nil, queue: .main) { notification in
+//            if let js = notification.object as? String {
+//                self.webView?.evaluateJavaScript(js)
+//            }
+//        }
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -33,6 +41,56 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScript
             DispatchQueue.main.async {
                 self.viewModel.isLoading = false
             }
+        } else if message.name == "request_notification_permission" {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+                    print("🔔 알림 권한 요청 결과: \(granted)")
+                    guard granted else {
+                        let js = "window.dispatchEvent(new CustomEvent('notification-denied'));"
+                        self.webView?.evaluateJavaScript(js)
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                
+                    // FCM 토큰 요청
+                    Messaging.messaging().token { token, error in
+                        if let error = error {
+                            print("❌ FCM 토큰 오류:", error)
+                            let js = "window.dispatchEvent(new CustomEvent('notification-denied'));"
+                            self.webView?.evaluateJavaScript(js)
+                        } else if let token = token {
+                            print("✅ FCM 토큰:", token)
+                            let js = "window.receiveNotificationToken &&    window.receiveNotificationToken('\(token)');"
+                            self.webView?.evaluateJavaScript(js)
+                        }
+                    }
+                }
+        } else if message.name == "check_notification_permission" {
+            UNUserNotificationCenter.current().getNotificationSettings { settings in
+                let status: String
+                switch settings.authorizationStatus {
+                case .notDetermined:
+                    status = "not_determined"
+                case .denied:
+                    status = "denied"
+                case .authorized:
+                    status = "authorized"
+                case .provisional:
+                    status = "provisional"
+                case .ephemeral:
+                    status = "ephemeral"
+                @unknown default:
+                    status = "unknown"
+                }
+
+                let js = "window.receiveNotificationPermission && window.receiveNotificationPermission('\(status)');"
+                DispatchQueue.main.async {
+                    self.webView?.evaluateJavaScript(js)
+                }
+            }
+        } else {
+            print("JS Log: \(message.body)")
         }
     }
 }

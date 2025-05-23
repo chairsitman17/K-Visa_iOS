@@ -10,8 +10,28 @@ import FirebaseAuth
 import GoogleSignIn
 import AuthenticationServices
 import CryptoKit
+import Foundation
 
 class WebViewViewModel: NSObject, ObservableObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    
+    @Published var url: URL = URL(string: "https://k-visa.co")!
+    @Published var prevUrl: URL = URL(string: "https://k-visa.co")!
+    @Published var isLoading: Bool = true
+    @Published var shouldReloadWebView: Bool = false
+    // authToken은 (Provider)/(Token)으로 구성되어 있음.
+    @Published var authToken: String?
+    @Published var currentNonce: String?
+
+    override init() {
+        super.init()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleOpenWebView(_:)), name: .OpenWebViewWithURL, object: nil)
+    }
+    
+    @objc private func handleOpenWebView(_ notification: Notification) {
+            if let newUrl = notification.object as? URL {
+                self.url = newUrl
+            }
+        }
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         // 현재 앱의 KeyWindow를 반환 (presentation용 Anchor)
@@ -23,13 +43,6 @@ class WebViewViewModel: NSObject, ObservableObject, ASAuthorizationControllerDel
         }
         return window
     }
-    
-    @Published var url: URL = URL(string: "https://kvisa-nextjs--k-visa-81cf2.asia-east1.hosted.app")!
-    @Published var isLoading: Bool = true
-    @Published var shouldReloadWebView: Bool = false
-    // authToken은 (Provider)/(Token)으로 구성되어 있음.
-    @Published var authToken: String?
-    @Published var currentNonce: String?
     
     func handleOAuthLogin(provider: String, presentingVC: UIViewController) {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }

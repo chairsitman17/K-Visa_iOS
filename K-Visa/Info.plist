@@ -9,11 +9,15 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.1094259681805-q2vkhbvbok7sf4ct2phek859mqu0mj3u</string>
+				<string>com.googleusercontent.apps.1094259681805-hjjjrbk6s5c156hb73m0gkb2opg1n860</string>
 			</array>
 		</dict>
 	</array>
 	<key>NSAppleIDUsageDescription</key>
 	<string>Apple 로그인을 사용하기 위한 인증</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

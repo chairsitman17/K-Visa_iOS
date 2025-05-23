@@ -15,9 +15,28 @@ struct WebViewView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> WKWebView {
         let loadCheckJS = """
-        window.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("load", function() {
             window.webkit.messageHandlers.pageDidFullyLoad.postMessage("complete");
         });
+        
+        (function() {
+            var methods = ['log', 'error', 'warn', 'info', 'debug'];
+            methods.forEach(function(method) {
+                var original = console[method];
+                console[method] = function() {
+                    var message = {
+                        type: method,
+                        args: Array.from(arguments).map(String).join(' ')
+                    };
+                    try {
+                        window.webkit.messageHandlers.logHandler.postMessage(message);
+                    } catch (e) {
+                        original("Failed to post message to native app:", e);
+                    }
+                    original.apply(console, arguments);
+                };
+            });
+        })();
         """
         let config = WKWebViewConfiguration()
         let contentController = WKUserContentController()
@@ -26,6 +45,11 @@ struct WebViewView: UIViewRepresentable {
         contentController.add(context.coordinator, name: "pageDidFullyLoad") // HTML, CSS, JS가 모두 로딩되었는지 확인하기 위함
         contentController.add(context.coordinator, name: "login_google") // WebView에서 Google Login 시그널을 받을 수 있게 하기
         contentController.add(context.coordinator, name: "login_apple") // WebView에서 Apple Login 시그널을 받을 수 있게 하기
+        contentController.add(context.coordinator, name: "request_notification_permission") // WebView에서 알림 토큰을 주고받을 수 있도록 하기
+        contentController.add(context.coordinator, name: "check_notification_permission") // WebView에서 알림을 허용한 상태인지 확인할 수 있게 하기
+        // JS에서 postMessage로 보낸 메시지를 수신할 핸들러 추가
+        contentController.add(context.coordinator, name: "logHandler")
+        
         config.userContentController = contentController
         config.websiteDataStore = WKWebsiteDataStore.default()
         if #available(iOS 14.0, *) {
@@ -41,6 +65,7 @@ struct WebViewView: UIViewRepresentable {
         
         webView.load(URLRequest(url: viewModel.url))
         context.coordinator.webView = webView
+        NotificationCenter.default.post(name: .WebViewReady, object: nil)
         return webView
     }
     
@@ -50,7 +75,6 @@ struct WebViewView: UIViewRepresentable {
             let tokenWithProvider = viewModel.authToken!
             let token = tokenWithProvider.split(separator: "/")
             let js = "window.dispatchEvent(new CustomEvent('firebase-login', { detail: { token: '\(token[1])', provider: '\(token[0])' } }));"
-            print(js)
             uiView.evaluateJavaScript(js)
             DispatchQueue.main.async {
                 viewModel.authToken = nil
@@ -61,6 +85,13 @@ struct WebViewView: UIViewRepresentable {
             uiView.reload()
             DispatchQueue.main.async {
                 viewModel.shouldReloadWebView = false // state 업데이트
+            }
+        }
+        // 주소가 업데이트되면 페이지 불러오기
+        if viewModel.prevUrl != viewModel.url {
+            uiView.load(URLRequest(url: viewModel.url))
+            DispatchQueue.main.async {
+                viewModel.prevUrl = viewModel.url
             }
         }
     }
