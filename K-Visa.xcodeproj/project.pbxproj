@@ -453,6 +453,8 @@
 				INFOPLIST_FILE = "K-Visa/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "K-Visa";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "amera access is required to take and upload photos of your passport and other documents.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required when uploading documents via video.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -490,6 +492,8 @@
 				INFOPLIST_FILE = "K-Visa/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "K-Visa";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "amera access is required to take and upload photos of your passport and other documents.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required when uploading documents via video.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
