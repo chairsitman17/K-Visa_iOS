@@ -14,8 +14,8 @@ import Foundation
 
 class WebViewViewModel: NSObject, ObservableObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     
-    @Published var url: URL = URL(string: "https://k-visa.co")!
-    @Published var prevUrl: URL = URL(string: "https://k-visa.co")!
+    @Published var url: URL = URL(string: "https://korea-visa.kr")!
+    @Published var prevUrl: URL = URL(string: "https://korea-visa.kr")!
     @Published var isLoading: Bool = true
     @Published var shouldReloadWebView: Bool = false
     // authToken은 (Provider)/(Token)으로 구성되어 있음.

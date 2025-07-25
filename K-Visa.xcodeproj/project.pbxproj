@@ -451,7 +451,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "K-Visa/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "K-Visa";
+				INFOPLIST_KEY_CFBundleDisplayName = "Korea-Visa";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "amera access is required to take and upload photos of your passport and other documents.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required when uploading documents via video.";
@@ -468,7 +468,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kvisa.kvisaapp;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -490,7 +490,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "K-Visa/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "K-Visa";
+				INFOPLIST_KEY_CFBundleDisplayName = "Korea-Visa";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "amera access is required to take and upload photos of your passport and other documents.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required when uploading documents via video.";
@@ -507,7 +507,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kvisa.kvisaapp;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -521,11 +521,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7WTLCKV6V4;
+				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.K-VisaTests";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -540,11 +540,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7WTLCKV6V4;
+				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.K-VisaTests";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -558,10 +558,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7WTLCKV6V4;
+				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.K-VisaUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -575,10 +575,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7WTLCKV6V4;
+				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.K-VisaUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
