@@ -33,19 +33,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		66154ABD2DC46FA50036244C /* K-Visa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K-Visa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		66154ACD2DC46FA70036244C /* K-VisaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K-VisaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		66154AD72DC46FA70036244C /* K-VisaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K-VisaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66154ABD2DC46FA50036244C /* Korea-Visa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Korea-Visa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66154ACD2DC46FA70036244C /* Korea-VisaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Korea-VisaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66154AD72DC46FA70036244C /* Korea-VisaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Korea-VisaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		667EE0952DC9FC0400DD981A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		667EE0902DC9A85400DD981A /* Exceptions for "K-Visa" folder in "K-Visa" target */ = {
+		667EE0902DC9A85400DD981A /* Exceptions for "K-Visa" folder in "Korea-Visa" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 66154ABC2DC46FA50036244C /* K-Visa */;
+			target = 66154ABC2DC46FA50036244C /* Korea-Visa */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -53,7 +53,7 @@
 		66154ABF2DC46FA50036244C /* K-Visa */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				667EE0902DC9A85400DD981A /* Exceptions for "K-Visa" folder in "K-Visa" target */,
+				667EE0902DC9A85400DD981A /* Exceptions for "K-Visa" folder in "Korea-Visa" target */,
 			);
 			path = "K-Visa";
 			sourceTree = "<group>";
@@ -115,9 +115,9 @@
 		66154ABE2DC46FA50036244C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66154ABD2DC46FA50036244C /* K-Visa.app */,
-				66154ACD2DC46FA70036244C /* K-VisaTests.xctest */,
-				66154AD72DC46FA70036244C /* K-VisaUITests.xctest */,
+				66154ABD2DC46FA50036244C /* Korea-Visa.app */,
+				66154ACD2DC46FA70036244C /* Korea-VisaTests.xctest */,
+				66154AD72DC46FA70036244C /* Korea-VisaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66154ABC2DC46FA50036244C /* K-Visa */ = {
+		66154ABC2DC46FA50036244C /* Korea-Visa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66154AE12DC46FA70036244C /* Build configuration list for PBXNativeTarget "K-Visa" */;
+			buildConfigurationList = 66154AE12DC46FA70036244C /* Build configuration list for PBXNativeTarget "Korea-Visa" */;
 			buildPhases = (
 				66154AB92DC46FA50036244C /* Sources */,
 				66154ABA2DC46FA50036244C /* Frameworks */,
@@ -147,7 +147,7 @@
 			fileSystemSynchronizedGroups = (
 				66154ABF2DC46FA50036244C /* K-Visa */,
 			);
-			name = "K-Visa";
+			name = "Korea-Visa";
 			packageProductDependencies = (
 				667EE0842DC9A63E00DD981A /* GoogleSignIn */,
 				667EE0862DC9A63E00DD981A /* GoogleSignInSwift */,
@@ -156,12 +156,12 @@
 				667770702DCDFBD100AF9C9A /* FirebaseMessaging */,
 			);
 			productName = "K-Visa";
-			productReference = 66154ABD2DC46FA50036244C /* K-Visa.app */;
+			productReference = 66154ABD2DC46FA50036244C /* Korea-Visa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		66154ACC2DC46FA70036244C /* K-VisaTests */ = {
+		66154ACC2DC46FA70036244C /* Korea-VisaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66154AE42DC46FA70036244C /* Build configuration list for PBXNativeTarget "K-VisaTests" */;
+			buildConfigurationList = 66154AE42DC46FA70036244C /* Build configuration list for PBXNativeTarget "Korea-VisaTests" */;
 			buildPhases = (
 				66154AC92DC46FA70036244C /* Sources */,
 				66154ACA2DC46FA70036244C /* Frameworks */,
@@ -175,16 +175,16 @@
 			fileSystemSynchronizedGroups = (
 				66154AD02DC46FA70036244C /* K-VisaTests */,
 			);
-			name = "K-VisaTests";
+			name = "Korea-VisaTests";
 			packageProductDependencies = (
 			);
 			productName = "K-VisaTests";
-			productReference = 66154ACD2DC46FA70036244C /* K-VisaTests.xctest */;
+			productReference = 66154ACD2DC46FA70036244C /* Korea-VisaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		66154AD62DC46FA70036244C /* K-VisaUITests */ = {
+		66154AD62DC46FA70036244C /* Korea-VisaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66154AE72DC46FA70036244C /* Build configuration list for PBXNativeTarget "K-VisaUITests" */;
+			buildConfigurationList = 66154AE72DC46FA70036244C /* Build configuration list for PBXNativeTarget "Korea-VisaUITests" */;
 			buildPhases = (
 				66154AD32DC46FA70036244C /* Sources */,
 				66154AD42DC46FA70036244C /* Frameworks */,
@@ -198,11 +198,11 @@
 			fileSystemSynchronizedGroups = (
 				66154ADA2DC46FA70036244C /* K-VisaUITests */,
 			);
-			name = "K-VisaUITests";
+			name = "Korea-VisaUITests";
 			packageProductDependencies = (
 			);
 			productName = "K-VisaUITests";
-			productReference = 66154AD72DC46FA70036244C /* K-VisaUITests.xctest */;
+			productReference = 66154AD72DC46FA70036244C /* Korea-VisaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					66154ABC2DC46FA50036244C = {
 						CreatedOnToolsVersion = 16.0;
@@ -246,9 +246,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66154ABC2DC46FA50036244C /* K-Visa */,
-				66154ACC2DC46FA70036244C /* K-VisaTests */,
-				66154AD62DC46FA70036244C /* K-VisaUITests */,
+				66154ABC2DC46FA50036244C /* Korea-Visa */,
+				66154ACC2DC46FA70036244C /* Korea-VisaTests */,
+				66154AD62DC46FA70036244C /* Korea-VisaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,12 +305,12 @@
 /* Begin PBXTargetDependency section */
 		66154ACF2DC46FA70036244C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66154ABC2DC46FA50036244C /* K-Visa */;
+			target = 66154ABC2DC46FA50036244C /* Korea-Visa */;
 			targetProxy = 66154ACE2DC46FA70036244C /* PBXContainerItemProxy */;
 		};
 		66154AD92DC46FA70036244C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66154ABC2DC46FA50036244C /* K-Visa */;
+			target = 66154ABC2DC46FA50036244C /* Korea-Visa */;
 			targetProxy = 66154AD82DC46FA70036244C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -349,9 +349,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development: eun sun park (36P2CNAGT8)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6A226BWKP3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -413,9 +414,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development: eun sun park (36P2CNAGT8)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6A226BWKP3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -447,13 +449,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"K-Visa/Preview Content\"";
-				DEVELOPMENT_TEAM = 6A226BWKP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "K-Visa/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Korea-Visa";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
-				INFOPLIST_KEY_NSCameraUsageDescription = "amera access is required to take and upload photos of your passport and other documents.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to take and upload photos of your passport and other documents.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required when uploading documents via video.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -470,6 +471,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,13 +488,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"K-Visa/Preview Content\"";
-				DEVELOPMENT_TEAM = 6A226BWKP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "K-Visa/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Korea-Visa";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
-				INFOPLIST_KEY_NSCameraUsageDescription = "amera access is required to take and upload photos of your passport and other documents.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to take and upload photos of your passport and other documents.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required when uploading documents via video.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -509,6 +510,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,9 +521,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -538,9 +540,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -556,9 +558,9 @@
 		66154AE82DC46FA70036244C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisaUITests;
@@ -573,9 +575,9 @@
 		66154AE92DC46FA70036244C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6A226BWKP3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.theKAdministrativeAgency.koreaVisaUITests;
@@ -599,7 +601,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66154AE12DC46FA70036244C /* Build configuration list for PBXNativeTarget "K-Visa" */ = {
+		66154AE12DC46FA70036244C /* Build configuration list for PBXNativeTarget "Korea-Visa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66154AE22DC46FA70036244C /* Debug */,
@@ -608,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66154AE42DC46FA70036244C /* Build configuration list for PBXNativeTarget "K-VisaTests" */ = {
+		66154AE42DC46FA70036244C /* Build configuration list for PBXNativeTarget "Korea-VisaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66154AE52DC46FA70036244C /* Debug */,
@@ -617,7 +619,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66154AE72DC46FA70036244C /* Build configuration list for PBXNativeTarget "K-VisaUITests" */ = {
+		66154AE72DC46FA70036244C /* Build configuration list for PBXNativeTarget "Korea-VisaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66154AE82DC46FA70036244C /* Debug */,

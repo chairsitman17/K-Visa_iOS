@@ -9,6 +9,34 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Korea-Visa.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Promises (Playground).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>66154ABC2DC46FA50036244C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66154ACC2DC46FA70036244C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66154AD62DC46FA70036244C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

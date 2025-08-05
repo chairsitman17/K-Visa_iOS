@@ -142,8 +142,13 @@ extension WebViewViewModel {
           // 인증 성공!
           // K-Visa WebApp에 인증 토큰 전달을 위해
           // State 업데이트, WebViewView의 updateUIView Trigger하기
+          var fullName = ""
+          if let nameComponents = appleIDCredential.fullName {
+              let formatter = PersonNameComponentsFormatter()
+              fullName = formatter.string(from: nameComponents)
+          }
           DispatchQueue.main.async {
-              self.authToken = "apple/\(idTokenString)__rawNonce__\(nonce)"
+              self.authToken = "apple/\(idTokenString)__rawNonce__\(nonce)__fullName__\(fullName)"
           }
 
       }
