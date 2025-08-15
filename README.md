@@ -9,21 +9,14 @@ Korea-Visa는 한국 비자 관련 정보와 서비스를 제공하는 iOS 애�
 - Firebase Cloud Messaging을 통한 실시간 알림
 
 ## 기술 스택
-- **언어**: Kotlin
+- **언어**: Swift
 - **UI**: Next.js 
-- **최소 SDK**: 29 (Android 10.0)
-- **목표 SDK**: 35
 - **백엔드 서비스**: Google Firebase
 
 ## 설치 방법
 1. 앱 스토어에서 "Korea-Visa" 검색
 2. 애플리케이션 설치 후 로그인
 3. 서비스 이용
-
-## 빌드 및 실행
-- 디버그 빌드: `./gradlew assembleDebug`
-- 릴리스 빌드: `./gradlew assembleRelease`
-- 에뮬레이터 또는 실제 기기에서 실행: Android Studio의 Run 버튼 클릭
 
 ## 라이선스
 Copyright © 2025 The K Administrative Agency. All rights reserved.
