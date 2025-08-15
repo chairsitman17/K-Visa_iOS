@@ -1,23 +1,35 @@
-# Korea-Visa iOS App
+# Korea-Visa_iOS
 
-SwiftUI 기반의 WebView 앱으로, Next.js 웹사이트와 통합되어 Google/Apple 로그인을 지원하며 Firebase 인증을 통해 로그인 세션을 유지합니다. 이 앱은 iOS WebView에서 자바스크립트와 Swift 간의 브릿지를 사용하여 안전하고 부드러운 로그인 경험을 제공합니다.
+## 소개
+Korea-Visa는 한국 비자 관련 정보와 서비스를 제공하는 안드로이드 애플리케이션입니다. 사용자가 비자 신청 및 관리를 더 쉽게 할 수 있도록 도와줍니다.
 
----
+## 기능
+- Swift 브릿지 기능을 이용한 Google 로그인 지원
+- Swift 브릿지 기능을 이용한 Apple 로그인 지원
+- Firebase Cloud Messaging을 통한 실시간 알림
 
-## 주요 기능
+## 기술 스택
+- **언어**: Kotlin
+- **UI**: Next.js 
+- **최소 SDK**: 29 (Android 10.0)
+- **목표 SDK**: 35
+- **백엔드 서비스**: Google Firebase
 
-- WebView 기반으로 https://korea-visa.kr 웹사이트 렌더링
-- JavaScript ↔ Swift 간 메시지 통신 지원
-- Google / Apple OAuth 로그인 지원
-- Firebase Auth와 연동된 ID Token 처리
+## 설치 방법
+1. 앱 스토어에서 "Korea-Visa" 검색
+2. 애플리케이션 설치 후 로그인
+3. 서비스 이용
 
----
+## 빌드 및 실행
+- 디버그 빌드: `./gradlew assembleDebug`
+- 릴리스 빌드: `./gradlew assembleRelease`
+- 에뮬레이터 또는 실제 기기에서 실행: Android Studio의 Run 버튼 클릭
 
-## 더 알아보기
-[코리아이민센터 Korea-Visa 웹앱](https://korea-visa.kr)
+## 라이선스
+Copyright © 2025 The K Administrative Agency. All rights reserved.
 
----
-
-## 참고
-### Q: Korea-Visa 웹앱 코드도 보고싶어요!
-A: 클라이언트 분의 원활한 비즈니스를 위해 소스코드는 따로 공개되지 않습니다.
+## 연락처
+문의사항이 있으시면 아래 연락처로 문의해주세요:
+- 이메일: dodani1@naver.com
+- 웹사이트: https://korea-visa.kr
+- (개발자는 The K Administrative Agency의 직원이 아닙니다.)
